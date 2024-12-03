@@ -20,7 +20,7 @@
           <img src="/testcozmopay/src/assets/images/support_icon.svg" alt="">
         </div>
         <div class="window_caption">
-          <div class="title">الشعار</div>
+          <div class="window_title">الشعار</div>
           <img src="/testcozmopay/src/assets/images/hand.svg" alt="">
         </div>
       </div>
@@ -86,8 +86,7 @@ body {
     top: 20px;
     left: 50%;
     transform: translate(-50%, 0);
-    border: 1px;
-    border-color: #E6E7ED; 
+    border: 1px solid #E6E7ED;
     border-radius: 8px;
     padding: 6px;
     background-color: #E6E7ED;
@@ -115,6 +114,7 @@ body {
   .window_caption {
     display: flex;
     align-items: center;
+    color: #fff;
   }
 
   .window_caption title {
@@ -169,7 +169,7 @@ body {
     gap: 11px;
   }
 
-  .window_caption title {
+  .window_caption .window_title {
     font-size: 17.6px;
     line-height: 26.4px;
   }
@@ -227,11 +227,11 @@ body {
   .icon img {
     width: 28px;
     height: auto;
-  };
+  }
   .window_caption {
     gap: 15px;
   }
-  .window_caption title {
+  .window_caption .window_title {
     font-size: 22.67px;
     line-height: 34px;
   }
