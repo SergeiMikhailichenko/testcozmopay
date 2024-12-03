@@ -32,8 +32,8 @@
           type="text"
           placeholder="____ ____ ____ ____"
           maxlength="19"
-          @input="formatCardNumber"
-          @paste="handlePaste"
+          oninput="formatCardNumber(event)"
+          onpaste="handlePaste(event)"
           >
         <button class="btn1">المزيد</button>
       </div>
@@ -283,7 +283,20 @@ body {
   }
 }
 </style>  
+<script>
+    function formatCardNumber(event) {
+      let value = event.target.value.replace(/\D/g, '');
+      value = value.match(/.{1,4}/g)?.join(' ') || '';
+      event.target.value = value;
+    }
 
+    function handlePaste(event) {
+      event.preventDefault();
+      const pastedData = event.clipboardData.getData('text').replace(/\D/g, '').slice(0, 16);
+      const formattedData = pastedData.match(/.{1,4}/g)?.join(' ') || '';
+      event.target.value = formattedData;
+    }
+  </script>
 </body>
 
 </html>
