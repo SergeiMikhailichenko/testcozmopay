@@ -62,7 +62,7 @@ body {
     align-items: center;
     padding: 0 15px;
     border-radius: 5px;
-    width: 100%;
+/*     width: 100%; */
     background-image:
       radial-gradient(#2F3A5A, #1E2534);
   }
